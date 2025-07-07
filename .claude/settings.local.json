@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(chmod:*)",
+      "Bash(grep:*)",
+      "Bash(python:*)",
+      "Bash(AZURE_OPENAI_API_KEY=dummy python3 simple_test_runner.py --list)"
+    ],
+    "deny": []
+  }
+}

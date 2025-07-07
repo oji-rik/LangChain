@@ -1,0 +1,29 @@
+# Visual Studio
+  .vs/
+  *.user
+  *.suo
+  *.sln.docstates
+
+  # .NET Build outputs
+  bin/
+  obj/
+  packages/
+
+  # API Keys and Secrets
+  appsettings.json
+  *.env
+  *.key
+
+  # Python
+  __pycache__/
+  *.pyc
+  *.pyo
+  venv/
+  .env
+
+  # Claude settings
+  .claude/
+
+  # Logs
+  *.log
+  *.tmp

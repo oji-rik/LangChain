@@ -1,0 +1,614 @@
+{
+  "summary": "COMPREHENSIVE TEST SUITE SUMMARY REPORT\n================================================================================\nGenerated: 2025-07-07 15:58:21\n\n📊 OVERALL RESULTS\n------------------------------\nTotal Tests: 24\nTotal Passed: 12\nTotal Failed: 12\nSuccess Rate: 50.0%\nTotal Duration: 89.62s\n\n🔍 RESULTS BY PERSPECTIVE\n----------------------------------------\n\nBASIC_SAMPLE:\n  ❌ basic_sample: 3/6 (50.0%)\n\nINTERMEDIATE_SAMPLE:\n  ❌ intermediate_sample: 3/6 (50.0%)\n\nERROR_SAMPLE:\n  ❌ error_sample: 3/6 (50.0%)\n\nMULTILINGUAL_SAMPLE:\n  ❌ multilingual_sample: 3/6 (50.0%)\n\n💡 RECOMMENDATIONS\n------------------------------\n🚨 Poor performance. Significant issues need to be addressed.",
+  "results": {
+    "basic_sample": {
+      "start_time": "2025-07-07T15:57:59.352284",
+      "end_time": "2025-07-07T15:58:21.757008",
+      "duration_seconds": 22.404724,
+      "total_tests": 6,
+      "passed_tests": 3,
+      "failed_tests": 3,
+      "success_rate": 50.0,
+      "server_available": true,
+      "agent_initialized": true,
+      "results": [
+        {
+          "test_id": "basic_001",
+          "test_name": "234を素因数分解してください...",
+          "category": "single_function",
+          "success": false,
+          "execution_time": 1.8176844120025635,
+          "prompt": "234を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [],
+          "expected_result": [
+            2,
+            3,
+            3,
+            13
+          ],
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing number argument. Expected: 'number', 'n', 'num', 'value', or 'integer'. Received: input",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "basic_002",
+          "test_name": "[1, 2, 3, 4, 5]の合計を計算してください...",
+          "category": "single_function",
+          "success": true,
+          "execution_time": 1.3075737953186035,
+          "prompt": "[1, 2, 3, 4, 5]の合計を計算してください",
+          "expected_functions": [
+            "sum"
+          ],
+          "actual_functions": [
+            "sum"
+          ],
+          "expected_result": 15,
+          "actual_result": 15,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [1, 2, 3, 4, 5]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m15\u001b[0m\u001b[32;1m\u001b[1;3m[1, 2, 3, 4, 5]の合計は15です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n[1, 2, 3, 4, 5]の合計は15です。",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_001",
+          "test_name": "234を素因数分解し、その因数の総和を返してください...",
+          "category": "two_step_sequential",
+          "success": true,
+          "execution_time": 3.4152352809906006,
+          "prompt": "234を素因数分解し、その因数の総和を返してください",
+          "expected_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "actual_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "expected_result": 21,
+          "actual_result": 21,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'n': 234}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[2, 3, 3, 13]\u001b[0m\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [2, 3, 3, 13]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m21\u001b[0m\u001b[32;1m\u001b[1;3m234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_002",
+          "test_name": "12と18の最大公約数と最小公倍数を求めてください...",
+          "category": "parallel_operations",
+          "success": false,
+          "execution_time": 0.827869176864624,
+          "prompt": "12と18の最大公約数と最小公倍数を求めてください",
+          "expected_functions": [
+            "gcd",
+            "lcm"
+          ],
+          "actual_functions": [],
+          "expected_result": {
+            "gcd": 6,
+            "lcm": 36
+          },
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing a or b argument",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "error_001",
+          "test_name": "負の数 -5 の階乗を計算してください...",
+          "category": "negative_input_error",
+          "success": false,
+          "execution_time": 2.6915175914764404,
+          "prompt": "負の数 -5 の階乗を計算してください",
+          "expected_functions": [],
+          "actual_functions": [
+            "factorial"
+          ],
+          "expected_result": null,
+          "actual_result": 32,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        },
+        {
+          "test_id": "jp_001",
+          "test_name": "九十九を素因数分解してください...",
+          "category": "japanese_numbers",
+          "success": true,
+          "execution_time": 2.66787052154541,
+          "prompt": "九十九を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [
+            "prime_factorization"
+          ],
+          "expected_result": [
+            3,
+            3,
+            11
+          ],
+          "actual_result": [
+            3,
+            3,
+            11
+          ],
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'number': 99}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[3, 3, 11]\u001b[0m\u001b[32;1m\u001b[1;3m九十九（99）の素因数分解は、3 × 3 × 11 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n九十九（99）の素因数分解は、3 × 3 × 11 です。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        }
+      ]
+    },
+    "intermediate_sample": {
+      "start_time": "2025-07-07T15:57:59.352284",
+      "end_time": "2025-07-07T15:58:21.757008",
+      "duration_seconds": 22.404724,
+      "total_tests": 6,
+      "passed_tests": 3,
+      "failed_tests": 3,
+      "success_rate": 50.0,
+      "server_available": true,
+      "agent_initialized": true,
+      "results": [
+        {
+          "test_id": "basic_001",
+          "test_name": "234を素因数分解してください...",
+          "category": "single_function",
+          "success": false,
+          "execution_time": 1.8176844120025635,
+          "prompt": "234を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [],
+          "expected_result": [
+            2,
+            3,
+            3,
+            13
+          ],
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing number argument. Expected: 'number', 'n', 'num', 'value', or 'integer'. Received: input",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "basic_002",
+          "test_name": "[1, 2, 3, 4, 5]の合計を計算してください...",
+          "category": "single_function",
+          "success": true,
+          "execution_time": 1.3075737953186035,
+          "prompt": "[1, 2, 3, 4, 5]の合計を計算してください",
+          "expected_functions": [
+            "sum"
+          ],
+          "actual_functions": [
+            "sum"
+          ],
+          "expected_result": 15,
+          "actual_result": 15,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [1, 2, 3, 4, 5]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m15\u001b[0m\u001b[32;1m\u001b[1;3m[1, 2, 3, 4, 5]の合計は15です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n[1, 2, 3, 4, 5]の合計は15です。",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_001",
+          "test_name": "234を素因数分解し、その因数の総和を返してください...",
+          "category": "two_step_sequential",
+          "success": true,
+          "execution_time": 3.4152352809906006,
+          "prompt": "234を素因数分解し、その因数の総和を返してください",
+          "expected_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "actual_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "expected_result": 21,
+          "actual_result": 21,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'n': 234}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[2, 3, 3, 13]\u001b[0m\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [2, 3, 3, 13]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m21\u001b[0m\u001b[32;1m\u001b[1;3m234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_002",
+          "test_name": "12と18の最大公約数と最小公倍数を求めてください...",
+          "category": "parallel_operations",
+          "success": false,
+          "execution_time": 0.827869176864624,
+          "prompt": "12と18の最大公約数と最小公倍数を求めてください",
+          "expected_functions": [
+            "gcd",
+            "lcm"
+          ],
+          "actual_functions": [],
+          "expected_result": {
+            "gcd": 6,
+            "lcm": 36
+          },
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing a or b argument",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "error_001",
+          "test_name": "負の数 -5 の階乗を計算してください...",
+          "category": "negative_input_error",
+          "success": false,
+          "execution_time": 2.6915175914764404,
+          "prompt": "負の数 -5 の階乗を計算してください",
+          "expected_functions": [],
+          "actual_functions": [
+            "factorial"
+          ],
+          "expected_result": null,
+          "actual_result": 32,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        },
+        {
+          "test_id": "jp_001",
+          "test_name": "九十九を素因数分解してください...",
+          "category": "japanese_numbers",
+          "success": true,
+          "execution_time": 2.66787052154541,
+          "prompt": "九十九を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [
+            "prime_factorization"
+          ],
+          "expected_result": [
+            3,
+            3,
+            11
+          ],
+          "actual_result": [
+            3,
+            3,
+            11
+          ],
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'number': 99}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[3, 3, 11]\u001b[0m\u001b[32;1m\u001b[1;3m九十九（99）の素因数分解は、3 × 3 × 11 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n九十九（99）の素因数分解は、3 × 3 × 11 です。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        }
+      ]
+    },
+    "error_sample": {
+      "start_time": "2025-07-07T15:57:59.352284",
+      "end_time": "2025-07-07T15:58:21.757008",
+      "duration_seconds": 22.404724,
+      "total_tests": 6,
+      "passed_tests": 3,
+      "failed_tests": 3,
+      "success_rate": 50.0,
+      "server_available": true,
+      "agent_initialized": true,
+      "results": [
+        {
+          "test_id": "basic_001",
+          "test_name": "234を素因数分解してください...",
+          "category": "single_function",
+          "success": false,
+          "execution_time": 1.8176844120025635,
+          "prompt": "234を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [],
+          "expected_result": [
+            2,
+            3,
+            3,
+            13
+          ],
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing number argument. Expected: 'number', 'n', 'num', 'value', or 'integer'. Received: input",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "basic_002",
+          "test_name": "[1, 2, 3, 4, 5]の合計を計算してください...",
+          "category": "single_function",
+          "success": true,
+          "execution_time": 1.3075737953186035,
+          "prompt": "[1, 2, 3, 4, 5]の合計を計算してください",
+          "expected_functions": [
+            "sum"
+          ],
+          "actual_functions": [
+            "sum"
+          ],
+          "expected_result": 15,
+          "actual_result": 15,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [1, 2, 3, 4, 5]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m15\u001b[0m\u001b[32;1m\u001b[1;3m[1, 2, 3, 4, 5]の合計は15です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n[1, 2, 3, 4, 5]の合計は15です。",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_001",
+          "test_name": "234を素因数分解し、その因数の総和を返してください...",
+          "category": "two_step_sequential",
+          "success": true,
+          "execution_time": 3.4152352809906006,
+          "prompt": "234を素因数分解し、その因数の総和を返してください",
+          "expected_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "actual_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "expected_result": 21,
+          "actual_result": 21,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'n': 234}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[2, 3, 3, 13]\u001b[0m\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [2, 3, 3, 13]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m21\u001b[0m\u001b[32;1m\u001b[1;3m234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_002",
+          "test_name": "12と18の最大公約数と最小公倍数を求めてください...",
+          "category": "parallel_operations",
+          "success": false,
+          "execution_time": 0.827869176864624,
+          "prompt": "12と18の最大公約数と最小公倍数を求めてください",
+          "expected_functions": [
+            "gcd",
+            "lcm"
+          ],
+          "actual_functions": [],
+          "expected_result": {
+            "gcd": 6,
+            "lcm": 36
+          },
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing a or b argument",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "error_001",
+          "test_name": "負の数 -5 の階乗を計算してください...",
+          "category": "negative_input_error",
+          "success": false,
+          "execution_time": 2.6915175914764404,
+          "prompt": "負の数 -5 の階乗を計算してください",
+          "expected_functions": [],
+          "actual_functions": [
+            "factorial"
+          ],
+          "expected_result": null,
+          "actual_result": 32,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        },
+        {
+          "test_id": "jp_001",
+          "test_name": "九十九を素因数分解してください...",
+          "category": "japanese_numbers",
+          "success": true,
+          "execution_time": 2.66787052154541,
+          "prompt": "九十九を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [
+            "prime_factorization"
+          ],
+          "expected_result": [
+            3,
+            3,
+            11
+          ],
+          "actual_result": [
+            3,
+            3,
+            11
+          ],
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'number': 99}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[3, 3, 11]\u001b[0m\u001b[32;1m\u001b[1;3m九十九（99）の素因数分解は、3 × 3 × 11 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n九十九（99）の素因数分解は、3 × 3 × 11 です。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        }
+      ]
+    },
+    "multilingual_sample": {
+      "start_time": "2025-07-07T15:57:59.352284",
+      "end_time": "2025-07-07T15:58:21.757008",
+      "duration_seconds": 22.404724,
+      "total_tests": 6,
+      "passed_tests": 3,
+      "failed_tests": 3,
+      "success_rate": 50.0,
+      "server_available": true,
+      "agent_initialized": true,
+      "results": [
+        {
+          "test_id": "basic_001",
+          "test_name": "234を素因数分解してください...",
+          "category": "single_function",
+          "success": false,
+          "execution_time": 1.8176844120025635,
+          "prompt": "234を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [],
+          "expected_result": [
+            2,
+            3,
+            3,
+            13
+          ],
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing number argument. Expected: 'number', 'n', 'num', 'value', or 'integer'. Received: input",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "basic_002",
+          "test_name": "[1, 2, 3, 4, 5]の合計を計算してください...",
+          "category": "single_function",
+          "success": true,
+          "execution_time": 1.3075737953186035,
+          "prompt": "[1, 2, 3, 4, 5]の合計を計算してください",
+          "expected_functions": [
+            "sum"
+          ],
+          "actual_functions": [
+            "sum"
+          ],
+          "expected_result": 15,
+          "actual_result": 15,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [1, 2, 3, 4, 5]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m15\u001b[0m\u001b[32;1m\u001b[1;3m[1, 2, 3, 4, 5]の合計は15です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n[1, 2, 3, 4, 5]の合計は15です。",
+          "function_calls_log": [],
+          "complexity": "basic",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_001",
+          "test_name": "234を素因数分解し、その因数の総和を返してください...",
+          "category": "two_step_sequential",
+          "success": true,
+          "execution_time": 3.4152352809906006,
+          "prompt": "234を素因数分解し、その因数の総和を返してください",
+          "expected_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "actual_functions": [
+            "prime_factorization",
+            "sum"
+          ],
+          "expected_result": 21,
+          "actual_result": 21,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'n': 234}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[2, 3, 3, 13]\u001b[0m\u001b[32;1m\u001b[1;3m\nInvoking: `sum` with `{'numbers': [2, 3, 3, 13]}`\n\n\n\u001b[0m\u001b[33;1m\u001b[1;3m21\u001b[0m\u001b[32;1m\u001b[1;3m234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n234の素因数分解は 2, 3, 3, 13 です。これらの因数の総和は 21 です。",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "intermediate_002",
+          "test_name": "12と18の最大公約数と最小公倍数を求めてください...",
+          "category": "parallel_operations",
+          "success": false,
+          "execution_time": 0.827869176864624,
+          "prompt": "12と18の最大公約数と最小公倍数を求めてください",
+          "expected_functions": [
+            "gcd",
+            "lcm"
+          ],
+          "actual_functions": [],
+          "expected_result": {
+            "gcd": 6,
+            "lcm": 36
+          },
+          "actual_result": null,
+          "error_message": "Tool execution error: Function execution failed: Missing a or b argument",
+          "agent_response": "",
+          "function_calls_log": [],
+          "complexity": "intermediate",
+          "language": "japanese"
+        },
+        {
+          "test_id": "error_001",
+          "test_name": "負の数 -5 の階乗を計算してください...",
+          "category": "negative_input_error",
+          "success": false,
+          "execution_time": 2.6915175914764404,
+          "prompt": "負の数 -5 の階乗を計算してください",
+          "expected_functions": [],
+          "actual_functions": [
+            "factorial"
+          ],
+          "expected_result": null,
+          "actual_result": 32,
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n階乗（n!）は、通常、0または正の整数に対して定義されています。負の整数の階乗は定義されていません。  \nしたがって、-5の階乗は存在しません。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        },
+        {
+          "test_id": "jp_001",
+          "test_name": "九十九を素因数分解してください...",
+          "category": "japanese_numbers",
+          "success": true,
+          "execution_time": 2.66787052154541,
+          "prompt": "九十九を素因数分解してください",
+          "expected_functions": [
+            "prime_factorization"
+          ],
+          "actual_functions": [
+            "prime_factorization"
+          ],
+          "expected_result": [
+            3,
+            3,
+            11
+          ],
+          "actual_result": [
+            3,
+            3,
+            11
+          ],
+          "error_message": "",
+          "agent_response": "\n\n\u001b[1m> Entering new AgentExecutor chain...\u001b[0m\n\u001b[32;1m\u001b[1;3m\nInvoking: `prime_factorization` with `{'number': 99}`\n\n\n\u001b[0m\u001b[36;1m\u001b[1;3m[3, 3, 11]\u001b[0m\u001b[32;1m\u001b[1;3m九十九（99）の素因数分解は、3 × 3 × 11 です。\u001b[0m\n\n\u001b[1m> Finished chain.\u001b[0m\n\n九十九（99）の素因数分解は、3 × 3 × 11 です。",
+          "function_calls_log": [],
+          "complexity": "",
+          "language": "japanese"
+        }
+      ]
+    }
+  },
+  "timestamp": "2025-07-07T15:58:21.759018"
+}
