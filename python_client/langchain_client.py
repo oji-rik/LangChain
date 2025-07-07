@@ -76,7 +76,7 @@ def create_langchain_agent(
         tools=tools,
         memory=memory,
         verbose=True,
-        max_iterations=10
+        max_iterations=100
     )
     
     print("✓ LangChain agent created successfully")
