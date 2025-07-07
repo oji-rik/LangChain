@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureOpenAI_Net481_FunctionCalling", "AzureOpenAI_Net481_FunctionCalling\AzureOpenAI_Net481_FunctionCalling.csproj", "{EFB3E8EE-CF8F-42F9-8AA5-25DE57B7D8BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB3E8EE-CF8F-42F9-8AA5-25DE57B7D8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB3E8EE-CF8F-42F9-8AA5-25DE57B7D8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB3E8EE-CF8F-42F9-8AA5-25DE57B7D8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB3E8EE-CF8F-42F9-8AA5-25DE57B7D8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9B83032-CFF8-4BEB-BA2F-39668CF8156B}
+	EndGlobalSection
+EndGlobal

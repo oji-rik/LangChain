@@ -1,0 +1,40 @@
+﻿{
+  "choices": [
+    {
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": [],
+        "content": "パリでぜひ訪れたい人気スポットを４つご紹介します。\n\n1. エッフェル塔（Tour Eiffel）  \n   - パリのシンボル。展望台からは市内を360°一望できます。  \n   - チケットは公式サイトで事前予約がおすすめ（待ち時間短縮）。  \n   - 夜はライトアップが美しく、シャンパンフラッシュ（毎正時のキラキラ点灯）も見逃せません。\n\n2. ルーヴル美術館（Musée du Louvre）  \n   - 「モナ・リザ」をはじめ、世界的名作を多数所蔵。広大なので観たいエリアを絞って回ると効率的。  \n   - 火曜休館。オンラインで「優先入場チケット」を購入すると行列を避けられます。  \n   - ピラミッド前広場での写真撮影スポットも人気。\n\n3. ノートルダム大聖堂（Cathédrale Notre-Dame de Paris）  \n   - ゴシック建築の代表作。内部のステンドグラス（バラ窓）は必見。  \n   - 火災以降、修復工事中ですが周辺のセーヌ川沿いや裏手からの眺めは変わらず美しいです。  \n   - 近くのサント・シャペル（Sainte-Chapelle）もステンドグラスが素晴らしいのであわせてどうぞ。\n\n4. モンマルトルの丘とサクレ・クール寺院（Montmartre \u0026 Sacré-Cœur）  \n   - かつて芸術家が集った趣ある街並みと、丘の上にそびえる真っ白な聖堂。  \n   - テラスからはパリ市街を一望でき、特に日没時の景色がロマンチック。  \n   - 近くのテルトル広場（Place du Tertre）には似顔絵描きや画廊が並びます。\n\n【プチTips】  \n- メトロ（地下鉄）やRERが充実。スマホ用アプリ「Citymapper」などでルート検索すると便利。  \n- 早朝や平日夕方は観光地も比較的すいています。  \n- キャッシュレス対応の店舗が多いですが、小銭／コインパーキング用にユーロ硬貨を少し持っておくと安心です。  \n\n楽しいご旅行を！",
+        "refusal": null,
+        "role": "assistant"
+      }
+    }
+  ],"created":1749906852,"id":"chatcmpl-BiL00F86lbPq2exq1DQovtq83Eo4C","model":"o4-mini-2025-04-16","object":"chat.completion","prompt_filter_results":[{"prompt_index":0,"content_filter_results":{"hate":{"filtered":false,"severity":"safe"},"jailbreak":{"filtered":false,"detected":false},"self_harm":{"filtered":false,"severity":"safe"},"sexual":{"filtered":false,"severity":"safe"},"violence":{"filtered":false,"severity":"safe"}}}],"system_fingerprint":null,"usage":{"completion_tokens":851,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":256,"rejected_prediction_tokens":0},"prompt_tokens":43,"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0},"total_tokens":894}}
